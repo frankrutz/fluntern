@@ -38,5 +38,5 @@ Definition des Koordinatensystems:
 
 Ein Minecraft Block := 0.5 Meter.
 
-fluntern.png :
-![Bilby Stampede](https://github.com/potf0815/fluntern/blob/master/fluntern.png)
+schule_fluntern_minecraft.png :
+![Bilby Stampede](https://github.com/potf0815/fluntern/blob/master/schule_fluntern_minecraft.png)
