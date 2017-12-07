@@ -1,2 +1,6 @@
 # fluntern
-Schule Fluntern für Minecraft. Python.
+Schule Fluntern für Minecraft. 
+
+Programmiersprache: Python.
+
+
