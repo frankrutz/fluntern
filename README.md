@@ -1,11 +1,9 @@
-# Schule Fluntern für Minecraft
+# Schule Fluntern :: Minecraft
 
 Programmiersprache: Python.
 
 
 Status: Design
-
-Python programmieren 
 
 Ofizielle Minecraft Version der Schule Fluntern
 
