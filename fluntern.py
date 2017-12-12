@@ -28,20 +28,28 @@ def printCoordinateSystem():
 def makeFluntern():
 
     mc.setBlocks(-150,-1,-150, 150,0,150 ,1 )          #stone=street
-
-
     makeTree(110,0,5)  
 
 #########################################################################################
 def makeHort():
-    mc.setBlocks(0,0,0  ,18,10,28 ,1)
+    mc.setBlocks(0,0,0  ,18,10,-28 ,1)
 
+def makeUebergang():
+    mc.setBlocks(18,3,-4  ,53,5,-12 ,1)
+    for x in range(0, 4):
+        mc.setBlocks(25+x*7,0, -4 ,25+x*7,2, -4 ,1 )
+        mc.setBlocks(25+x*7,0,-12 ,25+x*7,2,-12 ,1 ) 
     
+def makeSchulhaus():
+    mc.setBlocks(54,0,0  ,72,18,-60 ,1)
 
 #########################################################################################
 
 initWorld()
 makeFluntern()
 makeHort()
-mc.player.setTilePos(1, 1, 1) #Spieler vor den Hort stellen
+makeUebergang()
+makeSchulhaus()
+printCoordinateSystem()
+mc.player.setTilePos(-5, 1, -5) #Spieler vor den Hort stellen
 
