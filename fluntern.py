@@ -32,16 +32,44 @@ def makeFluntern():
 
 #########################################################################################
 def makeHort():
-    mc.setBlocks(0,0,0  ,18,10,-28 ,1)
+    mc.setBlocks(0,0,0  ,15,9,-28 ,1)
 
 def makeUebergang():
-    mc.setBlocks(18,3,-4  ,53,5,-12 ,1)
+    mc.setBlocks(16,3,-4  ,50,5,-12 ,1)
     for x in range(0, 4):
-        mc.setBlocks(25+x*7,0, -4 ,25+x*7,2, -4 ,1 )
-        mc.setBlocks(25+x*7,0,-12 ,25+x*7,2,-12 ,1 ) 
+        mc.setBlocks(22+x*7,0, -4 ,22+x*7,2, -4 ,1 )
+        mc.setBlocks(22+x*7,0,-12 ,22+x*7,2,-12 ,1 ) 
     
 def makeSchulhaus():
-    mc.setBlocks(54,0,0  ,72,18,-60 ,1)
+    mc.setBlocks(51,0,0  ,69,9,-60 ,1)
+
+
+def makeFussballplatz():
+    mc.setBlocks(15,0,9  ,65,1,9  ,1)#Mauer zur Schule hin, stone
+    mc.setBlocks(15,0,10 ,65,1,11 ,3)#Mauer zur Schule hin, dirt
+    
+    mc.setBlocks(15,0,12 ,65,2,12 ,1)#Mauer zum Fussballplatz hin, stone
+    mc.setBlocks(34,3,12 ,61,7,12,85)#Gitter auf Mauer
+    
+    mc.setBlocks(61,0,13 ,61,2,28 ,1)#Mauer Fussballplatz-Parkplatz stone
+    mc.setBlocks(61,3,13 ,61,7,28,85)#Gitter auf Mauer
+
+
+    mc.setBlocks(34,0,13 ,34,2,55 ,1)#Mauer Fussballplatz Richtung Tram
+    mc.setBlocks(34,3,13 ,34,7,55,85)#Gitter auf Mauer
+    
+    mc.setBlocks(60,0,55 ,34,2,55 ,1)#Mauer Fussballplatz Richtung Berg
+    mc.setBlocks(60,3,55 ,34,7,55,85)#Gitter auf Mauer
+    
+    mc.setBlocks(60,1,13 ,35,1,55 ,2)#Grund Fussballplatz, gras
+    makeTree(40,1,65)
+
+
+def makeTurnhalle():
+    mc.setBlocks(65,0,32  ,100,9,55 ,1)#Turnhalle Hauptteil
+    mc.setBlocks(68,0,31  ,103,4,27 ,1)#Turnhalle Vorbau
+
+     
 
 #########################################################################################
 
@@ -50,6 +78,8 @@ makeFluntern()
 makeHort()
 makeUebergang()
 makeSchulhaus()
+makeFussballplatz()
+makeTurnhalle()
 printCoordinateSystem()
-mc.player.setTilePos(-5, 1, -5) #Spieler vor den Hort stellen
+mc.player.setTilePos(60, 1, 3) #Spieler vor den Haupteingang stellen
 
